@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistribuidorTarefas.Crawler
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistribuidorTarefas.Crawler.Worker", "src\DistribuidorTarefas.Crawler.Worker\DistribuidorTarefas.Crawler.Worker.csproj", "{76D30EF5-702D-486C-A7C3-EE197751F028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistribuidorTarefas.Crawler.WebApi", "src\DistribuidorTarefas.Crawler.WebApi\DistribuidorTarefas.Crawler.WebApi\DistribuidorTarefas.Crawler.WebApi.csproj", "{AE4B68DE-BB6A-483B-8F06-AAE0355DFF90}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{76D30EF5-702D-486C-A7C3-EE197751F028}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76D30EF5-702D-486C-A7C3-EE197751F028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76D30EF5-702D-486C-A7C3-EE197751F028}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE4B68DE-BB6A-483B-8F06-AAE0355DFF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE4B68DE-BB6A-483B-8F06-AAE0355DFF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE4B68DE-BB6A-483B-8F06-AAE0355DFF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE4B68DE-BB6A-483B-8F06-AAE0355DFF90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
