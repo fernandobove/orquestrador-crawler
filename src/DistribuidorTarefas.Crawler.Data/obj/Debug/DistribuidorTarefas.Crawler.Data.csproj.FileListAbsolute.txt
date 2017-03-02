@@ -1,0 +1,9 @@
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\bin\Debug\DistribuidorTarefas.Crawler.Data.dll.config
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\bin\Debug\DistribuidorTarefas.Crawler.Data.dll
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\bin\Debug\DistribuidorTarefas.Crawler.Data.pdb
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\bin\Debug\EntityFramework.dll
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\bin\Debug\EntityFramework.xml
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\obj\Debug\DistribuidorTarefas.Crawler.Data.dll
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\obj\Debug\DistribuidorTarefas.Crawler.Data.pdb
