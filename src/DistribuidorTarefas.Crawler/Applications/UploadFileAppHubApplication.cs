@@ -22,13 +22,13 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
 
             var app_file_request = new ArquivoRequest
             {
-                Application = new AplicacaoRequest() { Id = _appRequestId },
-                Category = new CategoriaRequest() { Id = 10 }, // --->> Proposta
+                ApplicationId = _appRequestId,
+                CategoryId = 10, // --->> Proposta
                 ClientKey = Guid.NewGuid().ToString(),
                 Content = my_file,
                 CreatedBy = "DistribuidorTarefas.Crawler",
                 MimeType = "application/PDF",
-                Name = "CAP.CTDIEBRA.0969000566880001.D161121.PDF"
+                Name = file_path.Substring(file_path.LastIndexOf("\\")+1)
             };
 
             using (HttpClient client = new HttpClient())

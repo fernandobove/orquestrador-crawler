@@ -7,3 +7,4 @@ C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\bin\Deb
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\obj\Debug\DistribuidorTarefas.Crawler.Data.dll
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\obj\Debug\DistribuidorTarefas.Crawler.Data.pdb
+C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Data\obj\Debug\DistribuidorTarefas.Crawler.Data.csprojResolveAssemblyReference.cache

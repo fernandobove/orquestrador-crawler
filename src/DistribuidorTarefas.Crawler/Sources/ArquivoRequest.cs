@@ -13,7 +13,9 @@ namespace DistribuidorTarefas.Crawler.Core.Sources
         public string CreatedBy { get; set; }
         public string ClientKey { get; set; }
         public byte[] Content { get; set; }
-        public CategoriaRequest Category { get; set; }
-        public AplicacaoRequest Application { get; set; }
+        public int CategoryId { get; set; }
+        //public CategoriaRequest Category { get; set; }
+        //public AplicacaoRequest Application { get; set; }
+        public string ApplicationId { get; set; }
     }
 }

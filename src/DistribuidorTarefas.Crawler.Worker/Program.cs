@@ -22,7 +22,7 @@ namespace DistribuidorTarefas.Crawler.Worker
 
             while (opcao.Trim().ToLower() != "sair")
             {
-                Console.Write("Opção: ");
+                Console.Write("Opção (arquivo upload/sair): ");
                 opcao = Console.ReadLine();
 
                 if (opcao.Trim().ToLower() == "sair")
@@ -30,12 +30,9 @@ namespace DistribuidorTarefas.Crawler.Worker
                     break;
                 }
 
-                _distribuidorTarefasApoliceBradescoApplication.Execute();
+                //_distribuidorTarefasApoliceBradescoApplication.Execute();
 
-                Console.Write("Arquivo Upload: ");
-                file_path = Console.ReadLine();
-
-                _uploadFileAppHubApplication.Execute(auth_response, file_path);
+                _uploadFileAppHubApplication.Execute(auth_response, opcao);
             }
 
         }
