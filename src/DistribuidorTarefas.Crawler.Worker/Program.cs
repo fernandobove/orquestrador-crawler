@@ -1,40 +1,46 @@
 ﻿using System;
 using DistribuidorTarefas.Crawler.Core.Applications;
+using DistribuidorTarefas.Crawler.Core.Sources;
 
 namespace DistribuidorTarefas.Crawler.Worker
 {
     public class Program
     {
-        private static DistribuidorTarefasApoliceBradescoApplication _distribuidorTarefasApoliceBradescoApplication = new DistribuidorTarefasApoliceBradescoApplication();
-        private static AuthenticationAppHubApplication _authenticationAppHubApplication = new AuthenticationAppHubApplication();
-        private static UploadFileAppHubApplication _uploadFileAppHubApplication = new UploadFileAppHubApplication();
+        private static ExecutarRoboBaixarDocumentoApplication _executarRoboBaixarDocumentoApplication = new ExecutarRoboBaixarDocumentoApplication();
+        private static ExecutarRoboBaixarDocumentoOGMApplication _executarRoboBaixarDocumentoOGMApplication = new ExecutarRoboBaixarDocumentoOGMApplication();
 
         static void Main(string[] args)
         {
-            var auth_response = _authenticationAppHubApplication.Execute();
-
-            Console.WriteLine(auth_response.AccessToken);
-            Console.WriteLine(auth_response.ExpirationDate);
-            Console.WriteLine(auth_response.UserName);
-
-            var opcao = string.Empty;
-            var file_path = string.Empty;
-
-            while (opcao.Trim().ToLower() != "sair")
+            if (args.Length > 0)
             {
-                Console.Write("Opção (arquivo upload/sair): ");
-                opcao = Console.ReadLine();
-
-                if (opcao.Trim().ToLower() == "sair")
+                try
                 {
-                    break;
+                    var sistema = args[0];
+
+                    var seguradora = new Seguradora { Id = int.Parse(args[1]), Nome = args[2], Processo = (int)Enum.Parse(typeof(Processo), args[3]) };
+
+                    var opcao = string.Empty;
+
+                    while (opcao.Trim().ToLower() != "sim")
+                    {
+                        if (sistema == Sistema.OGM.ToString())
+                        {
+                            _executarRoboBaixarDocumentoOGMApplication.Execute(seguradora);
+                        }
+                        else
+                        {
+                            _executarRoboBaixarDocumentoApplication.Execute(seguradora);
+                        }
+
+                        Console.Write("Deseja sair? (sim/não): ");
+                        opcao = Console.ReadLine();
+                    }
                 }
-
-                //_distribuidorTarefasApoliceBradescoApplication.Execute();
-
-                _uploadFileAppHubApplication.Execute(auth_response, opcao);
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.InnerException);
+                }
             }
-
         }
     }
 }

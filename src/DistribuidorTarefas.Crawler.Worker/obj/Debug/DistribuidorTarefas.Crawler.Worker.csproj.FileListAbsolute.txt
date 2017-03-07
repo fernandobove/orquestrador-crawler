@@ -25,12 +25,10 @@ C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\D
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\Debug\Newtonsoft.Json.dll
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\Debug\Crawler.Seguradoras.Contract.dll
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\Debug\Minuto.Core.Utils.dll
-C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\Debug\DistribuidorTarefas.Crawler.Data.dll
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\Debug\DistribuidorTarefas.Crawler.Core.pdb
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\Debug\EntityFramework.xml
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\Debug\EntityFramework.SqlServer.xml
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\Debug\Newtonsoft.Json.xml
-C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\bin\Debug\DistribuidorTarefas.Crawler.Data.pdb
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\obj\Debug\DistribuidorTarefas.Crawler.Worker.csprojResolveAssemblyReference.cache
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\obj\Debug\DistribuidorTarefas.Crawler.Worker.exe
 C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler.Worker\obj\Debug\DistribuidorTarefas.Crawler.Worker.pdb

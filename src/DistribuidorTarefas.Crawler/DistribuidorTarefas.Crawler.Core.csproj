@@ -62,29 +62,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Applications\AuthenticationAppHubApplication.cs" />
-    <Compile Include="Applications\DistribuidorTarefasApoliceBradescoApplication.cs" />
-    <Compile Include="Applications\UploadFileAppHubApplication.cs" />
+    <Compile Include="Applications\ExecutarRoboBaixarDocumentoApplication.cs" />
+    <Compile Include="Applications\ExecutarRoboBaixarDocumentoOGMApplication.cs" />
     <Compile Include="Queries\GetListaApolicesPendentes.cs" />
-    <Compile Include="Services\PosVendaTransmissaoService.cs" />
-    <Compile Include="Sources\AplicacaoRequest.cs" />
-    <Compile Include="Sources\ArquivoRequest.cs" />
-    <Compile Include="Sources\ArquivoResponse.cs" />
-    <Compile Include="Sources\AuthenticationRequest.cs" />
-    <Compile Include="Sources\AuthenticationResponse.cs" />
-    <Compile Include="Sources\BaixarApolice.cs" />
+    <Compile Include="Services\BuscarDocumentosPendentesService.cs" />
+    <Compile Include="Services\BuscarTiposDocumentoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sources\CategoriaRequest.cs" />
-    <Compile Include="Sources\DadosRetorno.cs" />
+    <Compile Include="Sources\DocumentoPendente.cs" />
+    <Compile Include="Sources\Documentos.cs" />
+    <Compile Include="Sources\Processo.cs" />
+    <Compile Include="Sources\Seguradora.cs" />
+    <Compile Include="Sources\Sistema.cs" />
     <Compile Include="Sources\Task.cs" />
     <Compile Include="Sources\TipoDocumento.cs" />
-    <Compile Include="Sources\VendaDocumento.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DistribuidorTarefas.Crawler.Data\DistribuidorTarefas.Crawler.Data.csproj">
-      <Project>{d7defea6-3170-45e6-8785-ea820665348b}</Project>
-      <Name>DistribuidorTarefas.Crawler.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
