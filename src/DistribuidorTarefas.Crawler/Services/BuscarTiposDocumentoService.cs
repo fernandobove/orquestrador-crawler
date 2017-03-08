@@ -30,8 +30,6 @@ namespace DistribuidorTarefas.Crawler.Core.Services
                     .ReadAsStringAsync()
                     .Result;
 
-                Console.WriteLine(result);
-
                 return JsonConvert.DeserializeObject<List<TipoDocumento>>(result);
             }
         }

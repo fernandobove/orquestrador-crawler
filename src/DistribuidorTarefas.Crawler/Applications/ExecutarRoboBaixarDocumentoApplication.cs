@@ -25,7 +25,7 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
             var documento = _buscarDocumentosPendentesService.ObterDocumentosPendentes(seguradora.Id, seguradora.Processo, 1, _pageSize);
             var listaPendencias = documento.Documentos;
 
-            for (int i=1; i*_pageSize < documento.total; i++)
+            for (int i=1; i*_pageSize < documento.Total; i++)
             {
                 documento = _buscarDocumentosPendentesService.ObterDocumentosPendentes(seguradora.Id, seguradora.Processo, i+1, _pageSize);
                 listaPendencias.AddRange(documento.Documentos);
@@ -41,9 +41,9 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
 
                 jsonConfiguration = JsonConvert.SerializeObject(config);
 
-                var tipoDocumento = Enum.GetName(typeof(Processo), seguradora.Processo);
+                var descricaoProcesso = Enum.GetName(typeof(Processo), seguradora.Processo);
 
-                Task task = new Task(seguradora.Nome, tipoDocumento, jsonConfiguration, _callbackUrl, $"{Environment.MachineName}:9001", seguradora.Id, seguradora.Nome, seguradora.Processo, $"{seguradora.Nome} - {tipoDocumento}");
+                Task task = new Task(seguradora.Nome, descricaoProcesso, jsonConfiguration, _callbackUrl, $"{Environment.MachineName}:9001", seguradora.Id, seguradora.Nome, seguradora.Processo, $"{seguradora.Nome} - {descricaoProcesso}");
 
                 Console.WriteLine(JsonConvert.SerializeObject(task));
 
@@ -61,8 +61,6 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
 
                     Console.WriteLine(result);
                 }
-
-                Console.WriteLine("Criando Tarefa");
             }
         }
 

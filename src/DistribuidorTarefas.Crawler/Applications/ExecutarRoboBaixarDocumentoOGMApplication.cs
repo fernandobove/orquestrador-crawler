@@ -1,6 +1,5 @@
 ﻿using Crawler.Seguradoras.Contract;
 using DistribuidorTarefas.Crawler.Core.Queries;
-using DistribuidorTarefas.Crawler.Core.Services;
 using Newtonsoft.Json;
 using System;
 using System.IO;
@@ -14,7 +13,6 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
     public class ExecutarRoboBaixarDocumentoOGMApplication
     {
         private readonly GetListaApolicesPendentes _getListaApolicesPendentes = new GetListaApolicesPendentes();
-        private readonly BuscarTiposDocumentoService _buscarTiposDocumentoService = new BuscarTiposDocumentoService();
         private readonly string _callbackUrl = ConfigurationManager.AppSettings["CallbackOGM.Url"];
         private readonly string _crawlerUrl = ConfigurationManager.AppSettings["Crawler.Url"];
 
@@ -23,8 +21,6 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
 
         public void Execute(Seguradora seguradora)
         {
-            var tipoDocumento = _buscarTiposDocumentoService.ObterListaTipoDocumento().Find(t => t.Id == seguradora.Processo);
-
             var listaPendencias = _getListaApolicesPendentes.Execute(seguradora.Id).ToArray();
 
             if (listaPendencias.Length > 0)
@@ -37,7 +33,9 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
 
                 jsonConfiguration = JsonConvert.SerializeObject(config);
 
-                Task task = new Task(seguradora.Nome, $"Baixar {tipoDocumento.Descricao}", jsonConfiguration, _callbackUrl, $"{Environment.MachineName}:9001", seguradora.Id, seguradora.Nome, tipoDocumento.Id, $"{seguradora.Nome} - Baixar {tipoDocumento.Descricao}");
+                var descricaoProcesso = Enum.GetName(typeof(Processo), seguradora.Processo);
+
+                Task task = new Task(seguradora.Nome, descricaoProcesso, jsonConfiguration, _callbackUrl, $"{Environment.MachineName}:9001", seguradora.Id, seguradora.Nome, seguradora.Processo, $"{seguradora.Nome} - {descricaoProcesso}");
 
                 Console.WriteLine(JsonConvert.SerializeObject(task));
 
@@ -52,11 +50,8 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
                         .ReadAsStringAsync()
                         .Result;
 
-
                     Console.WriteLine(result);
                 }
-
-                Console.WriteLine("Criando Tarefa");
             }
         }
 
