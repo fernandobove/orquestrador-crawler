@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Configuration;
 using DistribuidorTarefas.Crawler.Core.Sources;
+using System.Collections.Generic;
 
 namespace DistribuidorTarefas.Crawler.Core.Applications
 {
@@ -27,8 +28,7 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
 
             for (int i=1; i*_pageSize < documento.Total; i++)
             {
-                documento = _buscarDocumentosPendentesService.ObterDocumentosPendentes(seguradora.Id, seguradora.Processo, i+1, _pageSize);
-                listaPendencias.AddRange(documento.Documentos);
+                listaPendencias.AddRange(ObterListaDocumentosPendentes(seguradora, i+1));
             }
             
             if (listaPendencias.Count > 0)
@@ -67,6 +67,13 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
         private string JsonConfigurationPath(string seguradora)
         {
             return ConfigurationManager.AppSettings["JSON.Default.Directory"].Replace("seguradora", seguradora.ToLower());
+        }
+
+        private List<DocumentoPendente> ObterListaDocumentosPendentes(Seguradora seguradora, int page)
+        {
+            var documento = _buscarDocumentosPendentesService.ObterDocumentosPendentes(seguradora.Id, seguradora.Processo, page, _pageSize);
+
+            return documento.Documentos;
         }
 
     }

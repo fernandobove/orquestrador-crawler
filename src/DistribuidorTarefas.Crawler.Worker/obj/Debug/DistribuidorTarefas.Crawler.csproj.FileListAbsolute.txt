@@ -1,1 +1,0 @@
-C:\Dev\distribuidor-tarefas-crawler\DistribuidorTarefas.Crawler\DistribuidorTarefas.Crawler\bin\Debug\DistribuidorTarefas.Crawler.exe.config

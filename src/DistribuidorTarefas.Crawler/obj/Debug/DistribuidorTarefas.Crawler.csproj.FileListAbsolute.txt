@@ -1,5 +1,0 @@
-C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler\bin\Debug\DistribuidorTarefas.Crawler.dll
-C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler\bin\Debug\DistribuidorTarefas.Crawler.pdb
-C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler\obj\Debug\DistribuidorTarefas.Crawler.csprojResolveAssemblyReference.cache
-C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler\obj\Debug\DistribuidorTarefas.Crawler.dll
-C:\Dev\distribuidor-tarefas-crawler\src\DistribuidorTarefas.Crawler\obj\Debug\DistribuidorTarefas.Crawler.pdb
