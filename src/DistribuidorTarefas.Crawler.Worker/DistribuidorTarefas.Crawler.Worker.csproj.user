@@ -11,6 +11,6 @@
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>PVD 3 Azul BaixarApolice</StartArguments>
+    <StartArguments>PVD 18 Sompo BaixarApolice</StartArguments>
   </PropertyGroup>
 </Project>

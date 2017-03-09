@@ -26,11 +26,11 @@ namespace DistribuidorTarefas.Crawler.Core.Applications
             var documento = _buscarDocumentosPendentesService.ObterDocumentosPendentes(seguradora.Id, seguradora.Processo, 1, _pageSize);
             var listaPendencias = documento.Documentos;
 
-            for (int i=1; i*_pageSize < documento.Total; i++)
+            for (int i = 1; i * _pageSize < documento.Total; i++)
             {
-                listaPendencias.AddRange(ObterListaDocumentosPendentes(seguradora, i+1));
+                listaPendencias.AddRange(ObterListaDocumentosPendentes(seguradora, i + 1));
             }
-            
+
             if (listaPendencias.Count > 0)
             {
                 string jsonConfiguration = File.ReadAllText(JsonConfigurationPath(seguradora.Nome));
