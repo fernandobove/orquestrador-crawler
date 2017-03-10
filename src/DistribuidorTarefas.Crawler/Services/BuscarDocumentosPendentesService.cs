@@ -27,8 +27,6 @@ namespace DistribuidorTarefas.Crawler.Core.Services
                     .ReadAsStringAsync()
                     .Result;
 
-                Console.WriteLine(result);
-
                 var documento =  JsonConvert.DeserializeObject<Documento>(result);
 
                 return documento;

@@ -38,7 +38,8 @@ namespace DistribuidorTarefas.Crawler.Worker
                 }
                 catch(Exception ex)
                 {
-                    Console.WriteLine(ex.InnerException);
+                    Console.WriteLine(ex.Message);
+                    Console.Read();
                 }
             }
         }

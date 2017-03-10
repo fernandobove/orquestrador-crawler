@@ -64,7 +64,12 @@
   <ItemGroup>
     <Compile Include="Applications\ExecutarRoboBaixarDocumentoApplication.cs" />
     <Compile Include="Applications\ExecutarRoboBaixarDocumentoOGMApplication.cs" />
+    <Compile Include="Commands\BuildTaskConfigurationCommand.cs" />
+    <Compile Include="Queries\GetChildStepsTaskConfigStep.cs" />
     <Compile Include="Queries\GetListaApolicesPendentes.cs" />
+    <Compile Include="Queries\GetPropertiesBindings.cs" />
+    <Compile Include="Queries\GetStepsTaskConfig.cs" />
+    <Compile Include="Queries\GetTaskConfiguration.cs" />
     <Compile Include="Services\BuscarDocumentosPendentesService.cs" />
     <Compile Include="Services\BuscarTiposDocumentoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +78,7 @@
     <Compile Include="Sources\Processo.cs" />
     <Compile Include="Sources\Seguradora.cs" />
     <Compile Include="Sources\Sistema.cs" />
+    <Compile Include="Sources\StepConfig.cs" />
     <Compile Include="Sources\Task.cs" />
     <Compile Include="Sources\TipoDocumento.cs" />
   </ItemGroup>
